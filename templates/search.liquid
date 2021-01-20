@@ -1,0 +1,36 @@
+<!-- temporary hidden input for now.
+     this is only needed to circumvent Shopify search validation on landing page -->
+<input id="SearchInput" style="display:none;" />
+<!-- end temporary hidden input -->
+
+{% comment %} KLEVU - START {% endcomment %}
+    {% comment %} KLEVU - JS AND CSS ASSETS {% endcomment %}
+    <script src="{{ 'klevu-landing.js' | asset_url }}" ></script>
+    
+    {{ 'klevu-landing.css' | asset_url | stylesheet_tag }}
+    {{ 'klevu-landing-responsive.css' | asset_url | stylesheet_tag }}
+
+    <script src="{{ 'klevu-facets.js' | asset_url }}" ></script>
+    <script src="{{ 'klevu-landing-filter-left.js' | asset_url }}" ></script>
+	<script src="{{ 'klevu-landing-sort.js' | asset_url }}"></script>
+	<script src="{{ 'klevu-landing-limit.js' | asset_url }}"></script>
+    {{ 'klevu-facets.css' | asset_url | stylesheet_tag }}
+    {{ 'klevu-landing.css' | asset_url | stylesheet_tag }}
+
+
+    {% comment %} KLEVU - PLACEHOLDER FOR SEARCH RESULTS {% endcomment %}
+    <div class="klevuLanding"></div>
+
+    {% comment %} KLEVU - TEMPLATES FOR LANDING PAGE {% endcomment %}
+    {% include "klevu-landing-base" %}
+    {% include "klevu-landing-no-results-found" %}
+    {% include "klevu-landing-pagination" %}
+    {% include "klevu-landing-filters" %}
+    {% include "klevu-landing-results" %}
+    {% include "klevu-landing-product-block" %}
+    {% include "klevu-landing-filter-left" %}
+    {% include "landing-filter-left" %}
+	{% include "klevu-landing-sort" %}
+	{% include "landing-limit" %}
+
+{% comment %} KLEVU - END {% endcomment %}

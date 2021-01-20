@@ -1,0 +1,75 @@
+.predictive-search-wrapper {display:none}
+
+.klevuTarget.klevu-fluid > div {
+    position: absolute;
+    z-index: 10000;
+    max-height: 100%;
+}
+
+.klevuQuickSearchingArea {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #dddddd;
+    box-shadow: 0 3px 5px rgba(50, 50, 50, 0.25);
+    overflow-y: auto;
+}
+
+.klevuAutoSuggestionsWrap {
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    padding: 0 5px;
+}
+
+.klevuAutoSuggestionsWrap ul li {
+    margin: 5px 0;
+}
+
+.klevuProductsTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.klevuQuickSearchResultsList {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.klevuProduct {
+    list-style: none;
+    margin: 5px 0;
+    border-bottom: 1px solid #dddddd;
+    padding: 0 5px;
+}
+
+.klevuProduct:last-child {
+    border-bottom: none;
+}
+
+.klevuQuickProductInnerBlock {
+    display: flex;
+    justify-content: space-between;
+}
+
+.klevuProductItemTop {
+    width: 20%;
+}
+
+.klevuProductItemBottom {
+    width: 80%;
+    padding-left: 10px;
+}
+
+.klevuHeadingText, .klevuQuickProductName {
+    font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 480px) {
+    .klevuQuickSearchingArea {
+        max-height: 90vh;
+    }
+}
