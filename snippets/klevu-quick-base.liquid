@@ -2,12 +2,14 @@
     <div class="klevu-fluid">
         <div id="klevuSearchingArea" class="klevuQuickSearchingArea">
             <%=helper.render('kuTemplatePopularSearches',scope) %>
+            <%=helper.render('klevuRecentViewedProducts',scope) %>
             <div class="klevuSuggestionsBlock">
                 <%=helper.render('klevuQuickAutoSuggestions',scope) %>
                 <%=helper.render('klevuQuickPageSuggestions',scope) %>
                 <%=helper.render('klevuQuickCategorySuggestions',scope) %>
             </div>
             <%=helper.render('klevuQuickProducts',scope) %>
+
         </div>
       </div>
 </script>

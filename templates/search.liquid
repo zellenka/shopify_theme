@@ -14,8 +14,14 @@
     <script src="{{ 'klevu-landing-filter-left.js' | asset_url }}" ></script>
 	<script src="{{ 'klevu-landing-sort.js' | asset_url }}"></script>
 	<script src="{{ 'klevu-landing-limit.js' | asset_url }}"></script>
+    <script src="{{ 'klevu-landing-add-to-cart.js' | asset_url }}" ></script>
+    <script src="{{ 'klevu-landing-color-swatches.js' | asset_url }}" ></script>
+    <script src="{{ 'klevu-landing-product-quick-view.js' | asset_url }}" ></script>
+    <script src="{{ 'klevu-quick-recent-viewed-products.js' | asset_url }}" ></script>
     {{ 'klevu-facets.css' | asset_url | stylesheet_tag }}
     {{ 'klevu-landing.css' | asset_url | stylesheet_tag }}
+    {{ 'klevu-landing-color-swatches.css' | asset_url | stylesheet_tag }}
+    {{ 'klevu-product-quick-view.css' | asset_url | stylesheet_tag }}
 
 
     {% comment %} KLEVU - PLACEHOLDER FOR SEARCH RESULTS {% endcomment %}
@@ -32,5 +38,9 @@
     {% include "landing-filter-left" %}
 	{% include "klevu-landing-sort" %}
 	{% include "landing-limit" %}
+    {% include "landing-add-to-cart" %}
+    {% include "landing-product-quick-view" %}
+    {% include "quick-recent-viewed-product-block" %}
+    {% include "quick-recent-viewed-products" %}/
 
 {% comment %} KLEVU - END {% endcomment %}

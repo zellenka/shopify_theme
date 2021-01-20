@@ -68,8 +68,6 @@
     font-size: 1.1rem;
 }
 
-@media only screen and (max-width: 480px) {
-    .klevuQuickSearchingArea {
-        max-height: 90vh;
-    }
+.klevuQuickSearchingArea {
+    max-height: 90vh;
 }

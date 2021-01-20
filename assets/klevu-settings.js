@@ -13,14 +13,16 @@ function startup(klevu) {
             searchBoxTarget: false,
             minChars : 0 ,
             placeholder : "Search" ,
-            showQuickOnEnter : false ,
+            showQuickOnEnter : true ,
             fullPageLayoutEnabled : false,
             personalisation: false,
             redirects: [],
-            apiKey: 'klevu-14728819608184175'
+            //apiKey: 'klevu-14551849541532921'
+            apiKey: 'klevu-14728819608184175' //original
         },
         analytics: {
-            apiKey: 'klevu-14728819608184175'
+            //apiKey: 'klevu-14551849541532921'
+            apiKey: 'klevu-14728819608184175' //original
         }
     };
 
