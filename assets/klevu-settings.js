@@ -2,7 +2,7 @@
 function startup(klevu) {
     var options = {
         url : {
-            search: klevu.settings.url.protocol + '//cs2.ksearchnet.com/cs/v2/search',
+            search: klevu.settings.url.protocol + '//eucs24.ksearchnet.com/cs/v2/search',
             landing : '/search',
             protocolFull: klevu.settings.url.protocol + "//"
 
@@ -18,11 +18,11 @@ function startup(klevu) {
             personalisation: false,
             redirects: [],
             //apiKey: 'klevu-14551849541532921'
-            apiKey: 'klevu-14728819608184175' //original
+            apiKey: 'klevu-161044807077013122' //original
         },
         analytics: {
             //apiKey: 'klevu-14551849541532921'
-            apiKey: 'klevu-14728819608184175' //original
+            apiKey: 'klevu-161044807077013122' //original
         }
     };
 

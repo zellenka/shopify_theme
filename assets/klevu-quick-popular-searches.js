@@ -38,39 +38,20 @@ klevu.coreEvent.attach("setRemoteConfigQuick", {
             /**
              * Event to add popular searches data into the data template object
              */
-            box.getScope().chains.template.events.add({
+            box.getScope().chains.template.process.success.add({
                 name: "addPopularSearchData",
                 fire: function (data, scope) {
-                    // data.template.popularSearches = [];
-                    // var inputElement = klevu.dom.find(klevu.getSetting(scope.kScope.settings, "settings.search.searchBoxSelector"))[0];
-                    // var inputValue;
-                    // if (inputElement) {
-                    //     inputValue = inputElement.value;
-                    // }
-                    // if (!inputValue || inputValue.length == 0) {
-                    //     if (typeof klevu_webstorePopularTerms !== "undefined" && klevu_webstorePopularTerms) {
-                    //         data.template.popularSearches = klevu_webstorePopularTerms;
-                    //     }
-                    // }
-                    data.template.popularSearches = klevu_webstorePopularTerms;
-                }
-            });
-
-            box.getScope().chains.template.render.add({
-                name: "addPopularSearchData",
-                fire: function (data, scope) {
-                    //if (data.context.isSuccess) {
-                        data.template.popularSearches = klevu_webstorePopularTerms;
-                        //scope.kScope.template.setData(data.template);
-                        var targetBox = "kuTemplatePopularSearches";
-                        var element = scope.kScope.template.convertTemplate(scope.kScope.template.render(targetBox));
-                        var target = klevu.getSetting(scope.kScope.settings, "settings.search.searchBoxTarget");
-                        console.log(target)
-                        //target.innerHTML = '';
-                        //target.classList.add("klevuTarget");
-                        //scope.kScope.element.kData = data.template;
-                        scope.kScope.template.insertTemplate(target, element);
-                    //}
+                    data.template.popularSearches = [];
+                    var inputElement = klevu.dom.find(klevu.getSetting(scope.kScope.settings, "settings.search.searchBoxSelector"))[0];
+                    var inputValue;
+                    if (inputElement) {
+                        inputValue = inputElement.value;
+                    }
+                    if (!inputValue || inputValue.length == 0) {
+                        if (typeof klevu_webstorePopularTerms !== "undefined" && klevu_webstorePopularTerms) {
+                            data.template.popularSearches = klevu_webstorePopularTerms;
+                        }
+                    }
                 }
             });
 
@@ -80,7 +61,6 @@ klevu.coreEvent.attach("setRemoteConfigQuick", {
             box.getScope().chains.template.events.add({
                 name: "attachPopularSearchUIEvents",
                 fire: function (data, scope) {
-
                     var kuPopularSearchTermItem = klevu.dom.find(".kuPopularSearchTermItem");
                     klevu.each(kuPopularSearchTermItem, function (key, termItem) {
                         klevu.event.attach(termItem, "click", function () {
