@@ -2,7 +2,8 @@
 function startup(klevu) {
     var options = {
         url : {
-            search: klevu.settings.url.protocol + '//eucs24.ksearchnet.com/cs/v2/search',
+            //search: klevu.settings.url.protocol + '//eucs18v2.ksearchnet.com/cs/v2/search', 
+            search: klevu.settings.url.protocol + '//eucs24.ksearchnet.com/cs/v2/search', //original
             landing : '/search',
             protocolFull: klevu.settings.url.protocol + "//"
 
@@ -17,11 +18,11 @@ function startup(klevu) {
             fullPageLayoutEnabled : false,
             personalisation: false,
             redirects: [],
-            //apiKey: 'klevu-14551849541532921'
+            //apiKey: 'klevu-158134692284111613'
             apiKey: 'klevu-161044807077013122' //original
         },
         analytics: {
-            //apiKey: 'klevu-14551849541532921'
+            //apiKey: 'klevu-158134692284111613'
             apiKey: 'klevu-161044807077013122' //original
         }
     };

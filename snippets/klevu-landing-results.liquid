@@ -2,7 +2,10 @@
     <div class="kuResultsListing">
         <div class="productList klevuMeta" data-section="productList">
             <div class="kuResultContent">
-            
+                <a href="javascript:void(0)" class="kuBtn kuFacetsSlideIn kuMobileFilterBtn">
+                    <%=helper.translate("Filters")%>
+                </a>
+                
                 <%=helper.render('filters',scope,data,"productList") %>
 
                 <div class="kuResultWrap <%=(data.query.productList.filters.length == 0 )?'kuBlockFullwidth':''%>">

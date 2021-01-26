@@ -98,7 +98,7 @@ klevu.coreEvent.attach("setRemoteConfigLanding", {
                     var priorityFilterOptions = [{
                         key: "size",
                         options: [{
-                            name: "M"
+                            name: "L"
                         }, {
                             name: "small"
                         }]

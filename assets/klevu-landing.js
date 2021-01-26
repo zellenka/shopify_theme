@@ -375,7 +375,7 @@ klevu.coreEvent.attach("setRemoteConfigLanding", {
                     }, {
                         key: "type"
                     }, {
-                        key: "shade_color"
+                        key: "color"
                     }, {
                         key: "product_type"
                     }];

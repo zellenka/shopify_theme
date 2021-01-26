@@ -5,11 +5,10 @@
 
 {% comment %} KLEVU - START {% endcomment %}
     {% comment %} KLEVU - JS AND CSS ASSETS {% endcomment %}
-    <script src="{{ 'klevu-landing.js' | asset_url }}" ></script>
     
-    {{ 'klevu-landing.css' | asset_url | stylesheet_tag }}
-    {{ 'klevu-landing-responsive.css' | asset_url | stylesheet_tag }}
-
+    
+  
+    <script src="{{ 'klevu-landing.js' | asset_url }}" ></script>
     <script src="{{ 'klevu-facets.js' | asset_url }}" ></script>
     <script src="{{ 'klevu-landing-filter-left.js' | asset_url }}" ></script>
 	<script src="{{ 'klevu-landing-sort.js' | asset_url }}"></script>
@@ -20,11 +19,21 @@
     <script src="{{ 'klevu-quick-recent-viewed-products.js' | asset_url }}" ></script>
     <script src="{{ 'klevu-quick-view-color-swatches.js' | asset_url }}" ></script>
     <script src="{{ 'klevu-landing-filter-option-reorder.js' | asset_url }}" ></script>
+    <script src="{{ 'nouislider.js' | asset_url }}" ></script>
+    <script src="{{ 'klevu-landing-filter-price-slider.js' | asset_url }}" ></script>
+    <script src="{{ 'klevu-landing-init.js' | asset_url }}" ></script>
+    <script src="{{ 'klevu-landing-mobile-sliding-filter.js' | asset_url }}" ></script>
+
+    {{ 'klevu-landing.css' | asset_url | stylesheet_tag }}
+    {{ 'klevu-landing-responsive.css' | asset_url | stylesheet_tag }}
     {{ 'klevu-facets.css' | asset_url | stylesheet_tag }}
     {{ 'klevu-landing.css' | asset_url | stylesheet_tag }}
     {{ 'klevu-landing-color-swatches.css' | asset_url | stylesheet_tag }}
     {{ 'klevu-product-quick-view.css' | asset_url | stylesheet_tag }}
     {{ 'klevu-quick-view-color-swatches.css' | asset_url | stylesheet_tag }}
+    {{ 'nouislider.min.css' | asset_url | stylesheet_tag }}
+    {{ 'klevu-landing-filter-price-slider.css' | asset_url | stylesheet_tag }}
+    {{ 'klevu-landing-mobile-sliding-filter.css' | asset_url | stylesheet_tag }}
 
 
     {% comment %} KLEVU - PLACEHOLDER FOR SEARCH RESULTS {% endcomment %}
