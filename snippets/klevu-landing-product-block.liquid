@@ -8,7 +8,15 @@
             <div class="kuProdTop">
                 <% if(dataLocal["image"] != undefined && dataLocal.image !== "") { %>
                     <div class="klevuImgWrap">
-                        <a href="<%=dataLocal.url%>" class="klevuProductClick"><span class="kuprodImgSpan"><img src="<%=dataLocal.image%>" alt="<%=dataLocal.name%>" class="kuProdImg"></span></a>
+                        <a href="<%=dataLocal.url%>" class="klevuProductClick">
+                            <span class="kuprodImgSpan">
+                                <%if(dataLocal.image && dataLocal.image !== '') { 
+                                    dataLocal.image = dataLocal.image.replace('_medium', '')
+                                %>
+                                    <img src="<%=dataLocal.image%>" alt="<%=dataLocal.name%>" class="kuProdImg">
+                                <% } %>
+                            </span>
+                        </a>
                     </div>
                 <% } %>
                 <div class="kuQuickView">
