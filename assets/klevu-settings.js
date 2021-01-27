@@ -3,8 +3,8 @@ function startup(klevu) {
     var options = {
         url : {
             //search: klevu.settings.url.protocol + '//eucs18v2.ksearchnet.com/cs/v2/search', 
-            search: klevu.settings.url.protocol + '//eucs24.ksearchnet.com/cs/v2/search', //original
-            landing : '/search',
+            search: klevu.settings.url.protocol + '//eucs24v2.ksearchnet.com/cs/v2/search', //original
+            landing : '/pages/search-results',
             protocolFull: klevu.settings.url.protocol + "//"
 
         },

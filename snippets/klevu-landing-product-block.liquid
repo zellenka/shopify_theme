@@ -1,10 +1,9 @@
 <script type="template/klevu" id="klevuLandingTemplateProductBlock">
     <li class="klevuProduct" data-id="<%=dataLocal.id%>">
         <div class="kuProdWrap">
-            <%if(dataLocal.stickyLabelHead && dataLocal.stickyLabelHead != "") { %>
-                <div class="kuDiscountBadge">
-                    <span class="kuiscountTxt"><%=dataLocal.stickyLabelHead%><span><%=dataLocal.stickyLabelTail%></span></span>
-                </div>
+        <%=helper.render('landingProductBadge', scope, data, dataLocal) %>
+            <%if(dataLocal.swatchesInfo.length > 1) { %>
+                <div class="kuDiscountBadge"><span class="kuDiscountTxt"><%=dataLocal.swatchesInfo.length%> Colors</span></div>
             <% } %>
             <div class="kuProdTop">
                 <% if(dataLocal["image"] != undefined && dataLocal.image !== "") { %>
@@ -20,6 +19,9 @@
             <div class="kuProdBottom">
                 <div class="kuNameDesc">
                     <div class="kuName"><a href="<%=dataLocal.url%>" class="klevuProductClick"><%=dataLocal.name%></a></div>
+                    <%if(dataLocal.brand && dataLocal.brand !== '') { %>
+                        <span class="kuBrand"><%=dataLocal.brand%></span>
+                    <% } %>
                     <div class="kuDesc"><%=desc%></div>
                 </div>
                 <%=helper.render('landingProductSwatch',scope,data,dataLocal) %>                   

@@ -87,6 +87,28 @@ klevu.coreEvent.attach("setRemoteConfigLanding", {
             }
         });
 
+        klevu.search.landing.getScope().chains.request.build.add({
+            name: "addContentList",
+            fire: function(data, scope) {
+                var  parameterMap = klevu.getSetting(scope.kScope.settings, "settings.search.map", false);
+        
+                var contentList = klevu.extend( true , {}  , parameterMap.recordQuery );
+                var quickStorage = klevu.getSetting(scope.kScope.settings , "settings.storage");
+        
+                contentList.id = "contentList";
+                contentList.typeOfRequest = "SEARCH";
+                contentList.settings.query.term  = data.context.term;
+                contentList.settings.typeOfRecords = ["KLEVU_CMS"];
+                contentList.settings.searchPrefs = ["searchCompoundsAsAndQuery"];
+                contentList.settings.limit = 12;
+                contentList.filters.filtersToReturn.enabled = true;
+                data.request.current.recordQueries.push(contentList);
+        
+                data.context.doSearch = true;
+            }
+        });
+        
+
         /** Event to add pagination */
         klevu.search.landing.getScope().chains.template.events.add({
             name: "addPagination",

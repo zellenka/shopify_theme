@@ -1,0 +1,12 @@
+<!--
+    Search result Product badge template file
+-->
+<script type="template/klevu" id="searchResultProductBadge">
+    <%if(dataLocal.swatchesInfo && dataLocal.swatchesInfo != "") { %>
+        
+        <%if(dataLocal.swatchesInfo.length > 1) { %>
+            <div class="kuDiscountBadge"><span class="kuDiscountTxt"><%=dataLocal.swatchesInfo.length%> Colors</span></div>
+        <% } %>
+    <% } %>
+
+</script>

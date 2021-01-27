@@ -1,5 +1,7 @@
 <script type="template/klevu" id="klevuLandingTemplateBase">
     <div class="kuContainer">
+        <%=helper.render('tab-results', scope) %>
+        
         <% if(!helper.hasResults(data,"productList")) { %>
             <%=helper.render('noResultFound',scope) %>
         <% } else { %>

@@ -166,7 +166,8 @@
   
   {% comment %} KLEVU - START {% endcomment %}
     {% comment %} KLEVU - JS AND CSS ASSETS {% endcomment %}
-    <script src="{{ '//js.klevu.com/klevu-js-v2/2.3.2/klevu_debug.js' }}"></script>
+    {% comment %} <script src="{{ '//js.klevu.com/klevu-js-v2/2.3.2/klevu_debug.js' }}"></script> {% endcomment %}
+    <script src="{{ '//js.klevu.com/klevu-js-v2/2.3.2/klevu.js' }}"></script>
     <script src="{{ 'klevu-settings.js' | asset_url }}" ></script>
     <script src="{{ 'klevu-quick.js' | asset_url }}" ></script>
     <script src="{{ 'klevu-analytics-utils.js' | asset_url }}" ></script>
@@ -174,8 +175,10 @@
     <script src="{{ 'klevu-quick-add-to-cart.js' | asset_url }}" ></script>
     <script src="{{ 'klevu-quick-popular-searches.js' | asset_url }}" ></script>
     <script src="{{ 'klevu-color-swatches.js' | asset_url }}" ></script>
+    <script src="{{ 'klevu-voice-search.js' | asset_url }}" ></script>
     
     {{ 'klevu-quick.css' | asset_url | stylesheet_tag }}
+    {{ 'klevu-voice-search.css' | asset_url | stylesheet_tag }}
     
     {% comment %} KLEVU - TEMPLATES FOR QUICK SEARCH {% endcomment %}
     {% include "klevu-quick-base" %}

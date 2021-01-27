@@ -40,6 +40,24 @@ klevu.coreEvent.attach("setRemoteConfigLanding", {
                 case "PRICE_DESC":
                     return 'Price: High to low';
                     break;
+                case "NAME_ASC":
+                    return 'Name: A-Z';
+                    break;
+                case "NAME_DESC":
+                    return 'Name: Z-A';
+                    break;
+                    case "RATING_ASC":
+                        return 'Rating: Ascending';
+                        break;
+                    case "RATING_DESC":
+                        return 'RATING_DESC';
+                        break;
+                    case "NEW_ARRIVAL_ASC":
+                        return 'Newness: Old to New';
+                        break;
+                    case "NEW_ARRIVAL_DESC":
+                        return 'Newness: New to Old';
+                        break;
                 default:
                     return 'Relevance';
                     break;
