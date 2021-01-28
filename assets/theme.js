@@ -1422,7 +1422,7 @@ this.Shopify.theme.PredictiveSearchComponent = (function(PredictiveSearch) {
       return;
     }
 
-    this.searchUrl = config.searchUrl || '/search';
+    this.searchUrl = config.searchUrl || '/pages/search-results';
 
     // Store the keyword that was used for the search
     this._searchKeyword = '';

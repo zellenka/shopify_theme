@@ -176,9 +176,11 @@
     <script src="{{ 'klevu-quick-popular-searches.js' | asset_url }}" ></script>
     <script src="{{ 'klevu-color-swatches.js' | asset_url }}" ></script>
     <script src="{{ 'klevu-voice-search.js' | asset_url }}" ></script>
+    <script src="{{ 'klevu-quick-promotion-banner.js' | asset_url }}" ></script>
     
     {{ 'klevu-quick.css' | asset_url | stylesheet_tag }}
     {{ 'klevu-voice-search.css' | asset_url | stylesheet_tag }}
+    {{ 'klevu-quick-promotion-banner.css' | asset_url | stylesheet_tag }}
     
     {% comment %} KLEVU - TEMPLATES FOR QUICK SEARCH {% endcomment %}
     {% include "klevu-quick-base" %}
@@ -192,6 +194,7 @@
     {% include "quick-popular-searches" %}
     {% include "quick-recent-viewed-product-block" %}
     {% include "quick-recent-viewed-products" %}
+    {% include "quick-promotion-banner" %}
 {% comment %} KLEVU - END {% endcomment %}
 </head>
 

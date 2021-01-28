@@ -8,6 +8,26 @@
             <div class="kuProdTop">
                 <% if(dataLocal["image"] != undefined && dataLocal.image !== "") { %>
                     <div class="klevuImgWrap">
+                     <% console.log(dataLocal.imageHover) %>
+                    <% if(dataLocal.imageHover && dataLocal.imageHover !== '') { %>
+                        <a href="<%=dataLocal.url%>" class="klevuProductClick">
+                            <span class="kuprodImgSpan">
+                                <%if(dataLocal.image && dataLocal.image !== '' && dataLocal.imageHover && dataLocal.imageHover !== '' ) { 
+                                    
+                                    dataLocal.image = dataLocal.image.replace('_medium', '')
+                                    dataLocal.imageHover = dataLocal.imageHover.replace('_medium', '')
+                                %>
+                                    <img src="<%=dataLocal.image%>" 
+                                        srcset="<%=dataLocal.image%>"
+                                        alt="<%=dataLocal.name%>"
+                                        class="kuProdImg"
+                                        onmouseover="this.setAttribute('srcset','<%=dataLocal.imageHover%>')"
+                                        onmouseout="this.setAttribute('srcset','<%=dataLocal.image%>')"
+                                    >
+                                <% } %>
+                            </span>
+                        </a>
+                    <% } else { %>
                         <a href="<%=dataLocal.url%>" class="klevuProductClick">
                             <span class="kuprodImgSpan">
                                 <%if(dataLocal.image && dataLocal.image !== '') { 
@@ -17,6 +37,7 @@
                                 <% } %>
                             </span>
                         </a>
+                    <% } %>
                     </div>
                 <% } %>
                 <div class="kuQuickView">

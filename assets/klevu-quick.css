@@ -6,6 +6,10 @@
     max-height: 100%;
 }
 
+#klevuSearchingArea {
+    max-width: 320px;
+}
+
 .klevuQuickSearchingArea {
     display: flex;
     flex-direction: column;

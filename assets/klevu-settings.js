@@ -19,7 +19,11 @@ function startup(klevu) {
             personalisation: false,
             redirects: [],
             //apiKey: 'klevu-158134692284111613'
-            apiKey: 'klevu-161044807077013122' //original
+            apiKey: 'klevu-161044807077013122', //original
+            // redirects: {
+            //     klevu: "https://www.klevu.com/",
+            //     klevublogs: "https://info.klevu.com/blog",
+            // },
         },
         analytics: {
             //apiKey: 'klevu-158134692284111613'
@@ -49,3 +53,15 @@ klevu.coreEvent.attach("bindLocalBoxes",{
         klevu.searchEvents.functions.bindAllSearchBoxes.fire();
     }
 });
+
+// function startup(klevu) {
+//   var options = {
+//     search: {
+//       apiKey: "klevu-161044807077013122",
+//       redirects: {
+//         klevu: "https://www.klevu.com/",
+//         klevublogs: "https://info.klevu.com/blog",
+//       },
+//     },
+//   };
+// }
