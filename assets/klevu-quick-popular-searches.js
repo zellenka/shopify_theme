@@ -68,8 +68,9 @@ klevu.coreEvent.attach("setRemoteConfigQuick", {
                             term = encodeURIComponent(term);
                             var inputElement = klevu.dom.find(klevu.getSetting(scope.kScope.settings, "settings.search.searchBoxSelector"))[0];
                             var nameAttr = inputElement.name;
+                            
                             if (nameAttr) {
-                                window.location = "/?" + nameAttr + "=" + term;
+                                window.location = "/pages/search-results/?" + nameAttr + "=" + term;
                             }
                         });
                     });

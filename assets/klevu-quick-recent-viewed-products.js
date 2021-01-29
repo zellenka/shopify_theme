@@ -44,6 +44,7 @@
      */
     function bindProductClickForRecentView(scope, className) {
         var self = this;
+        
         var target = klevu.getSetting(scope.settings, "settings.search.searchBoxTarget");
         klevu.each(klevu.dom.find(className, target), function (index, ele) {
             klevu.event.attach(ele, "click", function (event) {
@@ -115,7 +116,8 @@ klevu.coreEvent.attach("setRemoteConfigQuick", {
                         var trendingProductList = klevu.extend(true, {}, parameterMap.recordQuery);
                         trendingProductList.id = "recentViewedProductList";
                         trendingProductList.typeOfRequest = "SEARCH";
-                        trendingProductList.settings.query.term = data.context.term;
+                        //trendingProductList.settings.query.term = data.context.term;
+                        trendingProductList.settings.query.term = "*";
                         trendingProductList.settings.typeOfRecords = ["KLEVU_PRODUCT"];
                         trendingProductList.settings.limit = limit;
                         data.request.current.recordQueries.push(trendingProductList);

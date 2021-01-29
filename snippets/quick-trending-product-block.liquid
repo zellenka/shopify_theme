@@ -1,6 +1,8 @@
-<script type="template/klevu" id="klevuQuickProductBlock">
-    <li class="klevuProduct" data-id="<%=dataLocal.id%>">
-        <a target="_self" href="<%=dataLocal.url%>" data-id="<%=dataLocal.id%>"  class="kuTrackRecentView klevuQuickProductInnerBlock trackProductClick">
+<!-- Product block template for Trending products in Quick Search Results -->
+
+<script type="template/klevu" id="klevuQuickTrendingProductBlock">
+    <li class="klevuProduct kuQSMenuItem" data-id="<%=dataLocal.id%>">
+        <a target="_self" href="<%=dataLocal.url%>" data-id="<%=dataLocal.id%>" class="klevuQuickProductInnerBlock trackProductClick kuQSMenuItemTarget">
             <div class="klevuProductItemTop">
                 <div class="klevuQuickImgWrap">
                     <div class="klevuQuickDiscountBadge"><strong><%=dataLocal.stickyLabelHead%></strong></div>
@@ -32,9 +34,9 @@
                             <% } %>
                         <% } %>
                     </div>
-                    <%=helper.render('quickSearchProductAddToCart',scope,data,dataLocal) %>
                 </div>
             </div>
+            <div class="klevuClearLeft"></div>
         </a>
     </li>
 </script>
